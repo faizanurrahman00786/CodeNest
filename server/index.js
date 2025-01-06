@@ -20,7 +20,7 @@ app.use(fileUpload({
 const cors = require("cors");
 app.use(
 	cors({
-		origin: "https://ed-tech-2f5549rcp-faizanur-rahmans-projects.vercel.app",
+		origin: "https://ed-tech-beta-orcin.vercel.app",
 		credentials: true,
 	})
 )
