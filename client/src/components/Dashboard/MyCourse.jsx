@@ -6,11 +6,11 @@ import toast from "react-hot-toast"
 import { BsCurrencyRupee } from "react-icons/bs"
 import { GiEmptyWoodBucket } from "react-icons/gi"
 
-export default function MyCourse() {
+export default function MyCourse(props) {
 
     const navigate = useNavigate()
 
-
+    const user= props.user;
     const [myCourses, setmyCourses] = useState([]);
 
     const getmyCourse = async () => {
@@ -21,6 +21,7 @@ export default function MyCourse() {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
+                        'Authorization': `Bearer${user.token}`,
                     },
                     credentials: "include"
                 }
