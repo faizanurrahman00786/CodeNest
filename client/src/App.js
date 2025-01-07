@@ -63,14 +63,14 @@ function App() {
         <Route element={login ? <Dashboard user={user} setisLogin={setisLogin} /> : <Home />}>
           <Route path="/dashboard/My-profile" element={<MyProfile user={user} />}></Route>
           <Route path="/dashboard/setting" element={<Setting user={user} setUser={setUser} setisLogin={setisLogin} />}></Route>
-          <Route path="/dashboard/enrolled-courses" element={<EnrolledCourse />}></Route>
+          <Route path="/dashboard/enrolled-courses" element={<EnrolledCourse user={user} />}></Route>
           <Route path="/dashboard/instructor" element={<InstructorDashboard/>}></Route>
-          <Route path="/dashboard/my-courses" element={<MyCourse />}></Route>
-          <Route path="/checkout/:courseName" element={<CheckoutPage />}></Route>
+          <Route path="/dashboard/my-courses" element={<MyCourse user={user} />}></Route>
+          <Route path="/checkout/:courseName" element={<CheckoutPage user={user} />}></Route>
           <Route path="/view-course/:courseName/:courseId" element={<Lecture user={user} />}></Route>
           <Route  element={<AddCourse />}>
-            <Route path="/dashboard/add-course" element={<CourseInformationForm />} />
-            <Route path="/add-Lecture/:courseName/:courseId" element={<LectureForm/>} />
+            <Route path="/dashboard/add-course" element={<CourseInformationForm user={user} />} />
+            <Route path="/add-Lecture/:courseName/:courseId" element={<LectureForm  user={user} />} />
           </Route>
         </Route>
 
