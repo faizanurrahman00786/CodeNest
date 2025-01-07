@@ -4,11 +4,11 @@ const User = require("../models/User");
 
 //auth
 exports.auth = async (req, res, next) => {
-    console.log("Token",req.cookies.token);
+    console.log("Token",req.cookies?.token);
     try{
         //extract token
-        const token = req.cookies.token ||
-                     req.body.token 
+        const token = req.cookies?.token ||
+                     req.body?.token 
                         || req.headers["Authorization"].split(" ")[1];
 
         //if token missing, then return response
