@@ -21,7 +21,7 @@ export default function MyCourse(props) {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
-                        'Authorization': `Bearer${user.token}`,
+                        'Authorization': `Bearer ${user.token}`,
                     },
                     credentials: "include"
                 }
