@@ -22,6 +22,7 @@ app.use(
 	cors({
 		origin: "https://ed-tech-beta-orcin.vercel.app",
 		credentials: true,
+		allowedHeaders: ['Content-Type', 'Authorization'],
 	})
 )
 
