@@ -28,6 +28,7 @@ export default function MyCourse(props) {
             );
 
             if (!Response.ok) {
+                console.log("token in frontend",user.token);
                 toast.error("Failed to load Courses");
             }
             const res = await Response.json();
