@@ -19,7 +19,10 @@ app.use(fileUpload({
 
 const cors = require("cors");
 app.use(
-	cors()
+	cors(
+		origin: "https://ed-tech-beta-orcin.vercel.app",
+		credentials: true,
+	)
 )
 
 const connect = require("./config/database");
